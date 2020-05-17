@@ -13,14 +13,15 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Administrativo';
 ?>
 <!DOCTYPE html>
-<html>
+<htmllang="pt-br">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    <meta charset ="UTF8" >
+	<title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
