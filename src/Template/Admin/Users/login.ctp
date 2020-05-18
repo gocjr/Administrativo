@@ -1,5 +1,5 @@
 <?= $this->Form->create('post', ['class' => 'form-signin']) ?>
-<?= $this->Html->imagem('../webroot/img/cake-php.png', [
+<?= $this->Html->imagem('cake-php.png', [
     'class' => 'mb-4',
     'alt' => 'texto de login',
     'width' => '72',
