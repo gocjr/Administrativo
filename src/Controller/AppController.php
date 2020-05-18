@@ -62,19 +62,19 @@ class AppController extends Controller
          * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        $this->loadComponent('Security');
+        //$this->loadComponent('Security');
+
     }
     public function beforeRender(Event $event)
     {
         $prefix = null;
-        if ($this->requet->getParam(['prefix']) !== null) {
+        if ($this->request->getParam(['prefix']) !== null) {
             $prefix = $this->request->getParam(['prefix']);
         }
+
         if ($prefix == 'admin') {
-            if (($this->request->getParam(['action'] !== null)) and
-                ($this->request->getParam(['action'] == 'login'))
-            ) {
-                $this->viewBuilder()->setLayout('admin');
+            if (($this->request->getParam(['action']) !== null) and ($this->request->getParam(['action']) == 'login')) {
+                $this->viewBuilder()->setLayout('login');
             }
         }
     }

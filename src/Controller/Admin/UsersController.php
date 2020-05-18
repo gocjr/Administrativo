@@ -1,10 +1,10 @@
 <?php
 
+namespace App\Controller;
+
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
-
-
 
 /**
  * Users Controller
@@ -13,6 +13,8 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
+
+
 class UsersController extends AppController
 {
     /**
@@ -54,11 +56,11 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Usuário Salvo com sucesso.'));
+                $this->Flash->success(('Usuário Salvo com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não foi salvo. Por favor tente novamente.'));
+            $this->Flash->error(('O usuário não foi salvo. Por favor tente novamente.'));
         }
         $this->set(compact('user'));
     }
@@ -82,7 +84,7 @@ class UsersController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não foi salvo. Por favor tente novamente.'));
+            $this->Flash->error(('O usuário não foi salvo. Por favor tente novamente.'));
         }
         $this->set(compact('user'));
     }
